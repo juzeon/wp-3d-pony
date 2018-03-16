@@ -13,7 +13,7 @@ You can also download [this](https://github.com/juzeon/wp-3d-pony/archive/master
 
 ## Texture
 
-The plugin includes two example texture:
+The plugin includes two textures as examples:
 
 `wp-content/plugins/wp-3d-pony/live2dw/assets/pony/texture.png`: A Rainbow Dash one, used as default.
 
