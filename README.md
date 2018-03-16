@@ -4,7 +4,12 @@
 
 ## Installation
 
-Download the [ZIP file](https://github.com/juzeon/wp-3d-pony/archive/master.zip) and install it on your wordpress dashboard.
+	cd /path/to/wordpress/wp-content/plugins/
+	git clone https://github.com/juzeon/wp-3d-pony wp-3d-pony
+	
+The activate it on your wordpress dashboard.
+
+You can also download [this](https://github.com/juzeon/wp-3d-pony/archive/master.zip) ZIP file and extract it to the directory where plugins stored. But remember to rename the directory from `wp-3d-pony-master` to `wp-3d-pony` before activation!
 
 ## Texture
 
