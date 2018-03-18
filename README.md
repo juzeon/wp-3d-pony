@@ -26,6 +26,10 @@ The plugin includes two textures as examples:
 
 You can create your own texture by editing either of them.
 
+## Default Settings
+
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fpgzdi0wb5j30kr0c0ta1.jpg)
+
 ## License
 
 GPL v2.0
