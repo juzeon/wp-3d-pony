@@ -24,8 +24,14 @@ class WP_3D_Pony{
 			'firstLoad'=>true,
 			'texture'=>esc_attr($_POST['texture']),
 			'position'=>esc_attr($_POST['position']),
-			'width'=>intval($_POST['width']),
-			'height'=>intval($_POST['height']),
+			'width'=>floatval($_POST['width']),
+			'height'=>floatval($_POST['height']),
+			'hOffset'=>floatval($_POST['hoffset']),
+			'vOffset'=>floatval($_POST['voffset']),
+			'scale'=>floatval($_POST['scale']),
+			'mscale'=>floatval($_POST['mscale']),
+			'opacityOnHover'=>floatval($_POST['opacityonhover']),
+			'opacityDefault'=>floatval($_POST['opacitydefault']),
 			'mobile'=>($_POST['mobile'])?true:false,
 			'activation'=>($_POST['activation'])?true:false
 			));
@@ -43,10 +49,16 @@ class WP_3D_Pony{
 		if($this->options['firstLoad']!=true){
 			update_option('wp_3d_pony', array(
 			'firstLoad'=>true,
-			'texture'=>'wp-content/plugins/wp-3d-pony/live2dw/assets/pony/texture.png',
+			'texture'=>'wp-content/plugins/wp-3d-pony/live2dw/assets/pony/rd.png',
 			'position'=>'right',
 			'width'=>80,
 			'height'=>160,
+			'hOffset'=>0,
+			'vOffset'=>-20,
+			'scale'=>1,
+			'mscale'=>0.5,
+			'opacityDefault'=>0.7,
+			'opacityOnHover'=>0.2,
 			'mobile'=>true,
 			'activation'=>true
 			));
@@ -72,15 +84,23 @@ class WP_3D_Pony{
 		<script>
 			L2Dwidget.init({
 				"model": {
-					"jsonPath": "<?php echo home_url().'/?ponymodel=1' ?>"
+					"jsonPath": "<?php echo home_url().'/?ponymodel=1' ?>",
+					"scale": <?php echo $this->options['scale'] ?>
 				},
 				"display": {
 					"position": "<?php echo $this->options['position'] ?>",
 					"width": <?php echo $this->options['width'] ?>,
-					"height": <?php echo $this->options['height'] ?>
+					"height": <?php echo $this->options['height'] ?>,
+					"hOffset": <?php echo $this->options['hOffset'] ?>,
+					"vOffset": <?php echo $this->options['vOffset'] ?>
 				},
 				"mobile": {
-					"show": <?php echo ($this->options['mobile'])?'true':'false' ?>
+					"show": <?php echo ($this->options['mobile'])?'true':'false' ?>,
+					"scale": <?php echo $this->options['mscale'] ?>
+				},
+				"react":{
+					"opacityDefault":<?php echo $this->options['opacityDefault'] ?>,
+					"opacityOnHover":<?php echo $this->options['opacityOnHover'] ?>
 				}
 			});
 		</script>

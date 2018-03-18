@@ -19,16 +19,34 @@
 				</select>
 			</td></tr>
 			<tr><td>Width: </td><td>
-				<input type="text" name="width" id="width" value="<?php echo $this->options['width'] ?>" />
+				<input type="text" name="width" id="width" value="<?php echo $this->options['width'] ?>" />px
 			</td></tr>
 			<tr><td>Height: </td><td>
-				<input type="text" name="height" id="height" value="<?php echo $this->options['height'] ?>" />
+				<input type="text" name="height" id="height" value="<?php echo $this->options['height'] ?>" />px
+			</td></tr>
+			<tr><td>Horizontal Offset: </td><td>
+				<input type="text" name="hoffset" id="hoffset" value="<?php echo $this->options['hOffset'] ?>" />px
+			</td></tr>
+			<tr><td>Vertical Offset: </td><td>
+				<input type="text" name="voffset" id="voffset" value="<?php echo $this->options['vOffset'] ?>" />px
+			</td></tr>
+			<tr><td>Common Scale: </td><td>
+				<input type="text" name="scale" id="scale" value="<?php echo $this->options['scale'] ?>" />times
+			</td></tr>
+			<tr><td>Default Opacity: </td><td>
+				<input type="text" name="opacitydefault" id="opacitydefault" value="<?php echo $this->options['opacityDefault'] ?>" />%
+			</td></tr>
+			<tr><td>Opacity On Hover: </td><td>
+				<input type="text" name="opacityonhover" id="opacityonhover" value="<?php echo $this->options['opacityOnHover'] ?>" />%
 			</td></tr>
 			<tr><td>Mobile Display: </td><td>
 				<select name="mobile">
 					<option <?php echo ($this->options['mobile'])?'selected="selected"':'' ?> value="1">Active</option>
 					<option <?php echo ($this->options['mobile'])?'':'selected="selected"' ?> value="0">Disabled</option>
 				</select>
+			</td></tr>
+			<tr><td>Mobile Scale: </td><td>
+				<input type="text" name="mscale" id="mscale" value="<?php echo $this->options['mscale'] ?>" />times
 			</td></tr>
 		</table>
 		<input type="submit" class="button-primary" value="更改"/><br />
