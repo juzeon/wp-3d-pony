@@ -1,6 +1,6 @@
 # WP 3D Pony
 
-`WP 3D Pony` is a wordpress plugin to show a 3D MLP:FiM(My Little Pony) pony on your website. It's based on live2dw and [Frash's Test Pony Model](steamcommunity.com/sharedfiles/filedetails/?id=578539741). 
+`WP 3D Pony` is a wordpress plugin to show a 3D MLP:FiM(My Little Pony) pony on your website. It's based on [Live2dWidget.js](https://l2dwidget.js.org) and [Frash's Pony Model](https://steamcommunity.com/sharedfiles/filedetails/?id=578539741). 
 
 ## Installation
 
@@ -15,15 +15,17 @@ You can also download [this](https://github.com/juzeon/wp-3d-pony/archive/master
 
 The plugin includes two textures as examples:
 
-`wp-content/plugins/wp-3d-pony/live2dw/assets/pony/texture.png`: A Rainbow Dash one, used as default.
+`wp-content/plugins/wp-3d-pony/live2dw/assets/pony/rd.png`: A Rainbow Dash one, which is used as default.
 
-![](https://ws1.sinaimg.cn/large/006tNc79gy1fpez1ef96hj303m06j3yq.jpg)
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fpgz7hvxzfj304706xglu.jpg)
 
 
 `wp-content/plugins/wp-3d-pony/live2dw/assets/pony/derpy.png`: A Derpy Hooves one.
 
-![](https://ws4.sinaimg.cn/large/006tNc79gy1fpez2cn5tzj303805wdg1.jpg)
+![](https://ws2.sinaimg.cn/large/006tKfTcgy1fpgz7tozctj304506imxd.jpg)
+
+You can create your own texture by editing either of them.
 
 ## License
 
-MIT
+GPL v2.0
