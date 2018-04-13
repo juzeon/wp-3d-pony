@@ -49,7 +49,7 @@
 				<input type="text" name="mscale" id="mscale" value="<?php echo $this->options['mscale'] ?>" />times
 			</td></tr>
 		</table>
-		<input type="submit" class="button-primary" value="更改"/><br />
+		<input type="submit" class="button-primary" value="OK"/><br />
 	</form>
 	<br /><br /><br />
 	Developed by <a href="https://github.com/juzeon/" target="_blank">@juzeon</a>. Details for this plugin: <a href="https://github.com/juzeon/wp-3d-pony" target="_blank">https://github.com/juzeon/wp-3d-pony</a>
