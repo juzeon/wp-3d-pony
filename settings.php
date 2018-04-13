@@ -9,8 +9,7 @@
 				</select>
 			</td></tr>
 			<tr><td>Texture Path: </td><td>
-				<input type="text" name="texture" style="width: 400px;" id="texture" value="<?php echo $this->options['texture'] ?>" />
-				*Only a relative path is allowed
+				<?php echo ABSPATH.$this->assetUrl ?><input type="text" name="texture" id="texture" value="<?php echo $this->options['texture'] ?>" />
 			</td></tr>
 			<tr><td>Position: </td><td>
 				<select name="position">

@@ -9,7 +9,9 @@ Author URI: https://github.com/juzeon/
 */
 class WP_3D_Pony{
 	public $options;
+	public $assetUrl;
 	public function __construct(){
+		$this->assetUrl=substr(wp_upload_dir()['baseurl'], strlen(site_url().'/')).'/wp-3d-pony/';
 		$this->options=get_option('wp_3d_pony');
 		$this->firstLoad();
 		add_action('admin_menu',function(){
@@ -42,14 +44,17 @@ class WP_3D_Pony{
    		</div>
 			<?php
 		}
-		
 		include plugin_dir_path(__FILE__).'settings.php';
 	}
 	public function firstLoad(){
 		if($this->options['firstLoad']!=true){
+			if(!file_exists(wp_upload_dir()['basedir'].'/wp-3d-pony'))mkdir(wp_upload_dir()['basedir'].'/wp-3d-pony');
+			copy(plugin_dir_path(__FILE__).'source/derpy.png',wp_upload_dir()['basedir'].'/wp-3d-pony/derpy.png');
+			copy(plugin_dir_path(__FILE__).'source/rd.png',wp_upload_dir()['basedir'].'/wp-3d-pony/rd.png');
+			copy(plugin_dir_path(__FILE__).'source/Pony.moc',wp_upload_dir()['basedir'].'/wp-3d-pony/Pony.moc');
 			update_option('wp_3d_pony', array(
 			'firstLoad'=>true,
-			'texture'=>'wp-content/plugins/wp-3d-pony/live2dw/assets/pony/rd.png',
+			'texture'=>'rd.png',
 			'position'=>'right',
 			'width'=>80,
 			'height'=>160,
@@ -70,9 +75,9 @@ class WP_3D_Pony{
 		{
 	"type": "Live2D Model Setting",
 	"name": "Pony",
-	"model": "wp-content/plugins/wp-3d-pony/live2dw/assets/Pony.moc",
+	"model": "<?php echo $this->assetUrl.'Pony.moc' ?>",
 	"textures": [
-		"<?php echo $this->options['texture'] ?>"
+		"<?php echo $this->assetUrl.$this->options['texture'] ?>"
 	]
 }
 		<?php
