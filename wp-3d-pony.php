@@ -11,7 +11,7 @@ class WP_3D_Pony{
 	public $options;
 	public $assetUrl;
 	public function __construct(){
-		$this->assetUrl=substr(wp_upload_dir()['baseurl'], strlen(site_url().'/')).'/wp-3d-pony/';
+		$this->assetUrl=substr(wp_upload_dir()['baseurl'], strlen(home_url().'/')).'/wp-3d-pony/';
 		$this->options=get_option('wp_3d_pony');
 		$this->firstLoad();
 		add_action('admin_menu',function(){
